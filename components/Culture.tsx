@@ -12,7 +12,7 @@ function ImageDescription({ text }: { text: string }) {
 
 function Culture() {
   return (
-    <article className="my-[12.5rem] grid grid-cols-3">
+    <article className="my-[12.5rem] flex justify-between">
       <div className="col-span-auto">
         <h2 className="text-8xl font-bold text-bico-gray-400">Culture</h2>
         <p className="text-sm font-bold text-bico-gray-400">
@@ -27,7 +27,7 @@ function Culture() {
           and moving fast.
         </p>
       </div>
-      <div className="relative col-span-2 justify-self-end text-gray-900">
+      <div className="relative">
         <Image src={culture1} alt="Culture" />
         <div className="absolute bottom-[17px] w-full">
           <ImageDescription text="Yash & Aditya visiting the Himalayas, IN." />

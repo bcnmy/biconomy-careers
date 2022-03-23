@@ -5,6 +5,7 @@ import Culture from '../components/Culture';
 
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import TheBicoLife from '../components/TheBicoLife';
 
 import styles from '../styles/Home.module.css';
 
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
       <main className="container mx-auto">
         {/* <Hero /> */}
         <Culture />
+        <TheBicoLife />
       </main>
 
       {/* <footer className={styles.footer}>
