@@ -5,6 +5,7 @@ import Culture from '../components/Culture';
 
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import OpenRoles from '../components/OpenRoles';
 import TheBicoLife from '../components/TheBicoLife';
 import WhatItsLike from '../components/WhatItsLike';
 
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
         <Culture />
         <TheBicoLife />
         <WhatItsLike />
+        <OpenRoles />
       </main>
 
       {/* <footer className={styles.footer}>

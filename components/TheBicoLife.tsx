@@ -67,8 +67,8 @@ function Perk({
 
 function TheBicoLife() {
   return (
-    <article className="my-[12.5rem] flex justify-between">
-      <div className="col-span-auto">
+    <article className="my-[12.5rem] flex items-start justify-between">
+      <div>
         <h2 className="text-8xl font-bold text-bico-gray-400">The</h2>
         <h2 className="text-8xl font-bold text-bico-gray-400">Bico</h2>
         <h2 className="text-8xl font-bold text-bico-gray-400">Life</h2>
