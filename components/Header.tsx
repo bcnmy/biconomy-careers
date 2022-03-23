@@ -5,6 +5,14 @@ import darkLogo from '../assets/images/dark-logo.svg';
 import lightToggleIcon from '../assets/images/light-toggle-icon.svg';
 import darkToggleIcon from '../assets/images/dark-toggle-icon.svg';
 
+function NavItem({ text }: { text: string }) {
+  return (
+    <li className="mr-12 cursor-pointer text-2xl font-bold text-bico-gray-400 hover:text-bico-orange dark:text-white">
+      {text}
+    </li>
+  );
+}
+
 function Header() {
   return (
     <header className="container mx-auto mt-24 flex items-center justify-between">
@@ -16,15 +24,15 @@ function Header() {
       </div>
 
       <nav>
-        <ul className="flex items-center text-2xl font-bold text-bico-gray-400 dark:text-white">
-          <li className="mr-12 cursor-pointer hover:text-gray-800">Culture</li>
-          <li className="mr-12 cursor-pointer hover:text-gray-800">Roles</li>
-          <li className="mr-12 cursor-pointer hover:text-gray-800">Contact</li>
+        <ul className="flex items-center">
+          <NavItem text="Culture" />
+          <NavItem text="Roles" />
+          <NavItem text="Contact" />
           <li>
-            <button className="block hover:text-gray-800 dark:hidden">
+            <button className="block dark:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-6 w-6 text-bico-gray-400 hover:text-bico-orange"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -34,7 +42,7 @@ function Header() {
             <button className="hidden dark:block">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-6 w-6 text-white hover:text-bico-orange"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >

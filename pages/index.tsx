@@ -1,10 +1,12 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import Culture from '../components/Culture';
 
-import Header from "../components/Header";
+import Header from '../components/Header';
+import Hero from '../components/Hero';
 
-import styles from "../styles/Home.module.css";
+import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
@@ -17,15 +19,18 @@ const Home: NextPage = () => {
 
       <Header />
 
-      {/* <main className="container">hello world!</main>
+      <main className="container mx-auto">
+        {/* <Hero /> */}
+        <Culture />
+      </main>
 
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
+          Powered by{' '}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>

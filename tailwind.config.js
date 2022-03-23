@@ -9,12 +9,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'bico-orange': '#d85111',
         'bico-gray': {
           100: '#e5e5e5',
           200: '#c4c4c4',
           300: '#c1c1c1',
           400: '#545757',
         },
+        'culture-image-desc': 'rgba(193, 193, 193, 0.75)'
       }
     },
     fontFamily: {
