@@ -26,13 +26,13 @@ function Footer() {
 
         <nav>
           <ul className="flex items-center">
-            <li className="mr-14 text-2xl font-bold text-white dark:text-black">
+            <li className="mr-14 text-2xl font-bold text-white dark:text-[#212325]">
               <a href="https://medium.com/biconomy">Blog</a>
             </li>
-            <li className="mr-14 text-2xl font-bold text-white dark:text-black">
+            <li className="mr-14 text-2xl font-bold text-white dark:text-[#212325]">
               <a href="https://docs.biconomy.io/comm/contact-us">Contact</a>
             </li>
-            <li className="mr-14 text-2xl font-bold text-white dark:text-black">
+            <li className="mr-14 text-2xl font-bold text-white dark:text-[#212325]">
               <a href="https://twitter.com/biconomy">
                 <div className="block dark:hidden">
                   <Image src={twitterLogoLight} alt="Twitter" />
@@ -42,7 +42,7 @@ function Footer() {
                 </div>
               </a>
             </li>
-            <li className="mr-14 text-2xl font-bold text-white dark:text-black">
+            <li className="mr-14 text-2xl font-bold text-white dark:text-[#212325]">
               <a href="https://t.me/biconomy">
                 <div className="block dark:hidden">
                   <Image src={telegramLogoLight} alt="Telegram" />
@@ -52,7 +52,7 @@ function Footer() {
                 </div>
               </a>
             </li>
-            <li className="text-2xl font-bold text-white dark:text-black">
+            <li className="text-2xl font-bold text-white dark:text-[#212325]">
               <a href="https://discord.com/invite/HKHxgyEExQ">
                 <div className="block dark:hidden">
                   <Image src={discordLogoLight} alt="Discord" />
@@ -67,7 +67,7 @@ function Footer() {
 
         <a
           href="https://biconomy.io"
-          className="absolute right-0 text-2xl font-bold text-white dark:text-black"
+          className="absolute right-0 text-2xl font-bold text-white dark:text-[#212325]"
         >
           © 2022 // Biconomy.io
         </a>
