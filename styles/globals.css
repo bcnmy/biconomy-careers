@@ -19,6 +19,7 @@ a {
     font-family: 'texgyreadventor';
     src: local('texgyreadventor'),
       url(../assets/fonts/texgyreadventor-regular.woff2) format('woff2');
+    font-display: swap;
   }
 }
 
@@ -29,6 +30,7 @@ a {
     font-weight: 700;
     src: local('texgyreadventor'),
       url(../assets/fonts/texgyreadventor-bold.woff2) format('woff2');
+    font-display: swap;
   }
 }
 
