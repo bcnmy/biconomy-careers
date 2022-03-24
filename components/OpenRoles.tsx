@@ -61,15 +61,17 @@ function Role({
 }) {
   return (
     <div className="mb-14 cursor-pointer">
-      <p className="mb-2 flex items-center justify-between text-[2.75rem] text-bico-gray-400 dark:text-white">
-        {role.title}
+      <div className="mb-2 flex items-center justify-between">
+        <p className="text-[2.75rem] text-bico-gray-400 dark:text-white">
+          {role.title}
+        </p>
         <div className="block dark:hidden">
           <Image src={rightArrowLight} alt="See description" />
         </div>
         <div className="hidden dark:block">
           <Image src={rightArrowDark} alt="See description" />
         </div>
-      </p>
+      </div>
       <div className="mb-6 h-px w-full bg-bico-gray-400 dark:bg-white"></div>
       <p className="flex items-center text-2xl font-bold text-bico-gray-400 dark:text-white">
         {role.location}
@@ -81,7 +83,10 @@ function Role({
 
 function OpenRoles() {
   return (
-    <article className="my-[12.5rem] flex items-start justify-between">
+    <article
+      id="open-roles"
+      className="my-[12.5rem] flex items-start justify-between"
+    >
       <div>
         <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
           Open

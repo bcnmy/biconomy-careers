@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -15,19 +16,19 @@ a {
 
 @layer base {
   @font-face {
-    font-family: "texgyreadventor";
-    src: local("texgyreadventor"),
-      url(../assets/fonts/texgyreadventor-regular.woff2) format("woff2");
+    font-family: 'texgyreadventor';
+    src: local('texgyreadventor'),
+      url(../assets/fonts/texgyreadventor-regular.woff2) format('woff2');
   }
 }
 
 @layer base {
   @font-face {
-    font-family: "texgyreadventor";
+    font-family: 'texgyreadventor';
     font-style: bold;
     font-weight: 700;
-    src: local("texgyreadventor"),
-      url(../assets/fonts/texgyreadventor-bold.woff2) format("woff2");
+    src: local('texgyreadventor'),
+      url(../assets/fonts/texgyreadventor-bold.woff2) format('woff2');
   }
 }
 

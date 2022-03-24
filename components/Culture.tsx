@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import culture1 from '../assets/images/culture/culture-1.jpg';
+import culture1 from '../assets/images/culture/culture-1.png';
 
 function ImageDescription({ text }: { text: string }) {
   return (
@@ -12,7 +12,10 @@ function ImageDescription({ text }: { text: string }) {
 
 function Culture() {
   return (
-    <article className="my-[12.5rem] flex items-start justify-between">
+    <article
+      id="culture"
+      className="my-[12.5rem] flex items-start justify-between"
+    >
       <div>
         <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
           Culture
@@ -30,8 +33,9 @@ function Culture() {
         </p>
       </div>
       <div className="relative">
-        <Image src={culture1} alt="Culture" />
-        <div className="absolute bottom-[17px] w-full">
+        <Image src={culture1} alt="Culture" className="rounded-[3.125rem]" />
+
+        <div className="absolute bottom-[1.0625rem] w-full">
           <ImageDescription text="Yash & Aditya visiting the Himalayas, IN." />
         </div>
       </div>

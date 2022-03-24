@@ -4,10 +4,10 @@ import careersLogoLight from '../assets/images/careers-logo-light.svg';
 import careersLogoDark from '../assets/images/careers-logo-dark.svg';
 import { useTheme } from 'next-themes';
 
-function NavItem({ text }: { text: string }) {
+function NavItem({ children }: { children: React.ReactNode }) {
   return (
     <li className="mr-12 cursor-pointer text-2xl font-bold text-bico-gray-400 hover:text-bico-orange dark:text-white dark:hover:text-bico-orange">
-      {text}
+      {children}
     </li>
   );
 }
@@ -17,18 +17,32 @@ function Header() {
 
   return (
     <header className="container mx-auto flex items-center justify-between pt-24">
-      <div className="block dark:hidden">
-        <Image src={careersLogoLight} alt="Biconomy careers" />
-      </div>
-      <div className="hidden dark:block">
-        <Image src={careersLogoDark} alt="Biconomy careers" />
-      </div>
+      <a href="#">
+        <div className="block dark:hidden">
+          <Image src={careersLogoLight} alt="Biconomy careers" />
+        </div>
+        <div className="hidden dark:block">
+          <Image src={careersLogoDark} alt="Biconomy careers" />
+        </div>
+      </a>
 
       <nav>
         <ul className="flex items-center">
-          <NavItem text="Culture" />
-          <NavItem text="Roles" />
-          <NavItem text="Contact" />
+          <NavItem>
+            <a href="#culture">Culture</a>
+          </NavItem>
+          <NavItem>
+            <a href="#open-roles">Roles</a>
+          </NavItem>
+          <NavItem>
+            <a
+              href="https://docs.biconomy.io/comm/contact-us"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contact
+            </a>
+          </NavItem>
           <li>
             <button
               aria-label="Toggle Dark Mode"

@@ -27,13 +27,29 @@ function Footer() {
         <nav>
           <ul className="flex items-center">
             <li className="mr-14 text-2xl font-bold text-white dark:text-[#212325]">
-              <a href="https://medium.com/biconomy">Blog</a>
+              <a
+                href="https://medium.com/biconomy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Blog
+              </a>
             </li>
             <li className="mr-14 text-2xl font-bold text-white dark:text-[#212325]">
-              <a href="https://docs.biconomy.io/comm/contact-us">Contact</a>
+              <a
+                href="https://docs.biconomy.io/comm/contact-us"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contact
+              </a>
             </li>
             <li className="mr-14 text-2xl font-bold text-white dark:text-[#212325]">
-              <a href="https://twitter.com/biconomy">
+              <a
+                href="https://twitter.com/biconomy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="block dark:hidden">
                   <Image src={twitterLogoLight} alt="Twitter" />
                 </div>
@@ -43,7 +59,11 @@ function Footer() {
               </a>
             </li>
             <li className="mr-14 text-2xl font-bold text-white dark:text-[#212325]">
-              <a href="https://t.me/biconomy">
+              <a
+                href="https://t.me/biconomy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="block dark:hidden">
                   <Image src={telegramLogoLight} alt="Telegram" />
                 </div>
@@ -53,7 +73,11 @@ function Footer() {
               </a>
             </li>
             <li className="text-2xl font-bold text-white dark:text-[#212325]">
-              <a href="https://discord.com/invite/HKHxgyEExQ">
+              <a
+                href="https://discord.com/invite/HKHxgyEExQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="block dark:hidden">
                   <Image src={discordLogoLight} alt="Discord" />
                 </div>
@@ -67,6 +91,8 @@ function Footer() {
 
         <a
           href="https://biconomy.io"
+          target="_blank"
+          rel="noopener noreferrer"
           className="absolute right-0 text-2xl font-bold text-white dark:text-[#212325]"
         >
           © 2022 // Biconomy.io
