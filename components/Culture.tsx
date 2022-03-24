@@ -14,8 +14,10 @@ function Culture() {
   return (
     <article className="my-[12.5rem] flex items-start justify-between">
       <div>
-        <h2 className="text-8xl font-bold text-bico-gray-400">Culture</h2>
-        <p className="text-sm font-bold text-bico-gray-400">
+        <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
+          Culture
+        </h2>
+        <p className="text-sm font-bold text-bico-gray-400 dark:text-white">
           We&apos;ve built a rock-solid cuture at Biconomy
           <br />
           by valuing all sorts of things! But we particularly

@@ -1,26 +1,27 @@
 import Image from 'next/image';
 
-import lightLogo from '../assets/images/light-logo.svg';
-import darkLogo from '../assets/images/dark-logo.svg';
-import lightToggleIcon from '../assets/images/light-toggle-icon.svg';
-import darkToggleIcon from '../assets/images/dark-toggle-icon.svg';
+import careersLogoLight from '../assets/images/careers-logo-light.svg';
+import careersLogoDark from '../assets/images/careers-logo-dark.svg';
+import { useTheme } from 'next-themes';
 
 function NavItem({ text }: { text: string }) {
   return (
-    <li className="mr-12 cursor-pointer text-2xl font-bold text-bico-gray-400 hover:text-bico-orange dark:text-white">
+    <li className="mr-12 cursor-pointer text-2xl font-bold text-bico-gray-400 hover:text-bico-orange dark:text-white dark:hover:text-bico-orange">
       {text}
     </li>
   );
 }
 
 function Header() {
+  const { theme, setTheme } = useTheme();
+
   return (
-    <header className="container mx-auto mt-24 flex items-center justify-between">
+    <header className="container mx-auto flex items-center justify-between pt-24">
       <div className="block dark:hidden">
-        <Image src={lightLogo} alt="Biconomy careers" />
+        <Image src={careersLogoLight} alt="Biconomy careers" />
       </div>
       <div className="hidden dark:block">
-        <Image src={darkLogo} alt="Biconomy careers" />
+        <Image src={careersLogoDark} alt="Biconomy careers" />
       </div>
 
       <nav>
@@ -29,20 +30,23 @@ function Header() {
           <NavItem text="Roles" />
           <NavItem text="Contact" />
           <li>
-            <button className="block dark:hidden">
+            <button
+              aria-label="Toggle Dark Mode"
+              type="button"
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-bico-gray-400 hover:text-bico-orange"
+                className="block h-6 w-6 text-bico-gray-400 hover:text-bico-orange dark:hidden"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
               </svg>
-            </button>
-            <button className="hidden dark:block">
+
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-white hover:text-bico-orange"
+                className="hidden h-6 w-6 text-white hover:text-bico-orange dark:block"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >

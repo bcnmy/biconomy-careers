@@ -44,7 +44,7 @@ const roles = [
 
 function RoleCategory({ roleCategory }: { roleCategory: string }) {
   return (
-    <button className="flex h-[2.125rem] items-center rounded-full bg-[#D8511126] px-6 text-lg font-bold text-bico-gray-400">
+    <button className="flex h-[2.125rem] items-center rounded-full bg-[#D8511126] px-6 text-lg font-bold text-bico-gray-400 dark:bg-[#ffffff26] dark:text-white">
       {roleCategory}
     </button>
   );
@@ -60,12 +60,12 @@ function Role({
 }) {
   return (
     <div className="mb-14 cursor-pointer">
-      <p className="mb-2 flex items-center justify-between text-[2.75rem] text-bico-gray-400">
+      <p className="mb-2 flex items-center justify-between text-[2.75rem] text-bico-gray-400 dark:text-white">
         {role.title}
         <Image src={arrowRight} alt="See description" />
       </p>
-      <div className="mb-6 h-px w-full bg-bico-gray-400"></div>
-      <p className="flex items-center text-2xl font-bold text-bico-gray-400">
+      <div className="mb-6 h-px w-full bg-bico-gray-400 dark:bg-white"></div>
+      <p className="flex items-center text-2xl font-bold text-bico-gray-400 dark:text-white">
         {role.location}
         <span className="ml-6 text-[18px]">🌎</span>
       </p>
@@ -77,9 +77,13 @@ function OpenRoles() {
   return (
     <article className="my-[12.5rem] flex items-start justify-between">
       <div>
-        <h2 className="text-8xl font-bold text-bico-gray-400">Open</h2>
-        <h2 className="text-8xl font-bold text-bico-gray-400">Roles</h2>
-        <p className="mb-8 text-sm font-bold text-bico-gray-400">
+        <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
+          Open
+        </h2>
+        <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
+          Roles
+        </h2>
+        <p className="mb-8 text-sm font-bold text-bico-gray-400 dark:text-white">
           We are always looking forward to make new
           <br /> frens in building the future of web3.
         </p>

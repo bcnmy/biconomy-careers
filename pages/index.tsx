@@ -14,7 +14,7 @@ import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="bg-white dark:bg-black">
       <Head>
         <title>Biconomy - Careers</title>
         <meta name="description" content="Careers at Biconomy" />
