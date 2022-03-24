@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import arrowRight from '../assets/images/arrow-right.svg';
+import rightArrowLight from '../assets/images/right-arrow-light.svg';
+import rightArrowDark from '../assets/images/right-arrow-dark.svg';
 
 // Get from API.
 const roleCategories = [
@@ -62,7 +63,12 @@ function Role({
     <div className="mb-14 cursor-pointer">
       <p className="mb-2 flex items-center justify-between text-[2.75rem] text-bico-gray-400 dark:text-white">
         {role.title}
-        <Image src={arrowRight} alt="See description" />
+        <div className="block dark:hidden">
+          <Image src={rightArrowLight} alt="See description" />
+        </div>
+        <div className="hidden dark:block">
+          <Image src={rightArrowDark} alt="See description" />
+        </div>
       </p>
       <div className="mb-6 h-px w-full bg-bico-gray-400 dark:bg-white"></div>
       <p className="flex items-center text-2xl font-bold text-bico-gray-400 dark:text-white">
