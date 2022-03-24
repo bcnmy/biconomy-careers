@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   return (
     <div className="bg-white dark:bg-black">
       <Head>
-        <title>Biconomy - Careers</title>
+        <title>Careers - Biconomy</title>
         <meta name="description" content="Careers at Biconomy" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
