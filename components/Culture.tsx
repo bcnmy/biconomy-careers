@@ -1,6 +1,22 @@
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import culture1 from '../assets/images/culture/culture-1.png';
+import culture2 from '../assets/images/culture/culture-2.jpg';
+import culture3 from '../assets/images/culture/culture-3.jpg';
+import culture4 from '../assets/images/culture/culture-4.jpg';
+import culture5 from '../assets/images/culture/culture-5.jpg';
+import culture6 from '../assets/images/culture/culture-6.jpg';
+
+const cultureImages = [
+  culture1,
+  culture2,
+  culture3,
+  culture4,
+  culture5,
+  culture6,
+];
 
 function ImageDescription({ text }: { text: string }) {
   return (
@@ -11,6 +27,18 @@ function ImageDescription({ text }: { text: string }) {
 }
 
 function Culture() {
+  const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImageIndex(prevIndex => (prevIndex + 1) % cultureImages.length);
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <article
       id="culture"
@@ -32,13 +60,24 @@ function Culture() {
           and moving fast.
         </p>
       </div>
-      <div className="relative">
-        <Image src={culture1} alt="Culture" className="rounded-[3.125rem]" />
 
-        <div className="absolute bottom-[1.0625rem] w-full">
+      <motion.div
+        key={imageIndex}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="relative h-[870px] w-[870px] overflow-hidden rounded-[3.125rem] bg-black"
+      >
+        <Image
+          src={cultureImages[imageIndex]}
+          alt="Culture"
+          layout="fill"
+          objectFit="contain"
+        />
+        <div className="absolute bottom-[10px] w-full">
           <ImageDescription text="Yash & Aditya visiting the Himalayas, IN." />
         </div>
-      </div>
+      </motion.div>
     </article>
   );
 }

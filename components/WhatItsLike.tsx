@@ -1,5 +1,7 @@
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+
 import lovejeetAvatar from '../assets/images/biconauts/lovejeet.svg';
 
 const testimonials = [
@@ -26,17 +28,6 @@ const testimonials = [
   },
 ];
 
-function Progress({ progress }: { progress: number }) {
-  return (
-    <div
-      className="absolute -top-4 h-1 rounded-full bg-bico-gray-400 transition-width ease-linear"
-      style={{
-        width: `${progress}%`,
-      }}
-    ></div>
-  );
-}
-
 function Testimonial({
   testimonial,
 }: {
@@ -48,7 +39,7 @@ function Testimonial({
   };
 }) {
   return (
-    <>
+    <div className="flex flex-col">
       <p className="mb-10 text-[2.75rem] text-bico-gray-400 dark:text-white">
         {testimonial.description}
       </p>
@@ -61,27 +52,20 @@ function Testimonial({
       <span className="text-2xl font-bold text-bico-gray-400 dark:text-white">
         {testimonial.designation}
       </span>
-    </>
+    </div>
   );
 }
 
 function WhatItsLike() {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setTestimonialIndex(prevIndex => (prevIndex + 1) % testimonials.length);
-      setProgress(0);
     }, 10000);
-
-    const progressInterval = setInterval(() => {
-      setProgress(prevProgress => (prevProgress + 1) % 100);
-    }, 100);
 
     return () => {
       clearInterval(interval);
-      clearInterval(progressInterval);
     };
   }, []);
 
@@ -100,8 +84,14 @@ function WhatItsLike() {
       </div>
 
       <div className="relative grid grid-cols-[870px]">
-        <Progress progress={progress} />
-        <Testimonial testimonial={testimonials[testimonialIndex]} />
+        <motion.div
+          key={testimonialIndex}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <Testimonial testimonial={testimonials[testimonialIndex]} />
+        </motion.div>
       </div>
     </article>
   );
