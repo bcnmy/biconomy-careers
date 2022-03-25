@@ -17,6 +17,9 @@ module.exports = {
           400: '#545757',
         },
         'culture-image-desc': 'rgba(193, 193, 193, 0.75)'
+      },
+      transitionProperty: {
+        'width': 'width',
       }
     },
     fontFamily: {

@@ -26,6 +26,17 @@ const testimonials = [
   },
 ];
 
+function Progress({ progress }: { progress: number }) {
+  return (
+    <div
+      className="absolute -top-4 h-1 rounded-full bg-bico-gray-400 transition-width ease-linear"
+      style={{
+        width: `${progress}%`,
+      }}
+    ></div>
+  );
+}
+
 function Testimonial({
   testimonial,
 }: {
@@ -56,12 +67,22 @@ function Testimonial({
 
 function WhatItsLike() {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTestimonialIndex(index => (index + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(interval);
+      setTestimonialIndex(prevIndex => (prevIndex + 1) % testimonials.length);
+      setProgress(0);
+    }, 10000);
+
+    const progressInterval = setInterval(() => {
+      setProgress(prevProgress => (prevProgress + 1) % 100);
+    }, 100);
+
+    return () => {
+      clearInterval(interval);
+      clearInterval(progressInterval);
+    };
   }, []);
 
   return (
@@ -78,7 +99,8 @@ function WhatItsLike() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-[870px]">
+      <div className="relative grid grid-cols-[870px]">
+        <Progress progress={progress} />
         <Testimonial testimonial={testimonials[testimonialIndex]} />
       </div>
     </article>
