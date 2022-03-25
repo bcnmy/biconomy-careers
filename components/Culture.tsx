@@ -73,6 +73,7 @@ function Culture() {
           alt="Culture"
           layout="fill"
           objectFit="contain"
+          placeholder="blur"
         />
         <div className="absolute bottom-[10px] w-full">
           <ImageDescription text="Yash & Aditya visiting the Himalayas, IN." />
