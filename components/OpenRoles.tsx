@@ -111,7 +111,7 @@ function OpenRoles() {
           We are always looking forward to make new
           <br /> frens in building the future of web3.
         </p>
-        <div className="flex w-full flex-wrap justify-center gap-2.5 lg:w-[430px]">
+        <div className="flex w-full flex-wrap justify-center gap-2.5 lg:w-[430px] lg:justify-start">
           {!departmentsData ? (
             <span className="text-hyphen-gray-400 text-lg font-bold dark:text-white">
               Getting all available departments!
