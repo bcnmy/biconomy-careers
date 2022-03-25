@@ -66,7 +66,7 @@ function Culture() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="relative h-[870px] w-[870px] overflow-hidden rounded-[3.125rem] bg-black"
+        className="relative h-[870px] w-[870px] overflow-hidden rounded-[3.125rem] bg-[#212325]"
       >
         <Image
           src={cultureImages[imageIndex]}
