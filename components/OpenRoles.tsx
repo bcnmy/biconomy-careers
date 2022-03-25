@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import rightArrowLight from '../assets/images/right-arrow-light.svg';
 import rightArrowDark from '../assets/images/right-arrow-dark.svg';
+import useSWR from 'swr';
 
 // Get from API.
 const roleCategories = [
@@ -43,6 +44,8 @@ const roles = [
   // Add for others.
 ];
 
+const fetcher = (url: string) => fetch(url).then(res => res.json());
+
 function RoleCategory({ roleCategory }: { roleCategory: string }) {
   return (
     <button className="flex h-[2.125rem] items-center rounded-full bg-[#D8511126] px-6 text-lg font-bold text-bico-gray-400 dark:bg-[#ffffff26] dark:text-white">
@@ -82,6 +85,13 @@ function Role({
 }
 
 function OpenRoles() {
+  const { data, error } = useSWR(
+    'https://www.workable.com/api/accounts/biconomy-labs-pte-ltd?details=true',
+    fetcher,
+  );
+
+  console.log(data);
+
   return (
     <article
       id="open-roles"
