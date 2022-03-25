@@ -5,14 +5,20 @@ const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 function Department({
   name,
+  selectedDepartment,
   handleDepartmentClick,
 }: {
   name: string;
+  selectedDepartment: string;
   handleDepartmentClick: (name: string) => void;
 }) {
   return (
     <button
-      className="flex h-[2.125rem] items-center rounded-full bg-[#D8511126] px-6 text-lg font-bold text-bico-gray-400 dark:bg-[#ffffff26] dark:text-white"
+      className={`flex h-[2.125rem] items-center rounded-full ${
+        name === selectedDepartment
+          ? 'border-2 border-bico-orange bg-white dark:bg-transparent'
+          : 'bg-[#D8511126] dark:bg-[#ffffff26]'
+      }  px-6 text-lg font-bold text-bico-gray-400 dark:text-white`}
       onClick={() => handleDepartmentClick(name)}
     >
       {name}
@@ -129,6 +135,7 @@ function OpenRoles() {
             <>
               <Department
                 name="All"
+                selectedDepartment={selectedDepartment}
                 handleDepartmentClick={handleDepartmentClick}
               />
               {departmentsData.map(
@@ -139,6 +146,7 @@ function OpenRoles() {
                     <Department
                       key={index}
                       name={name}
+                      selectedDepartment={selectedDepartment}
                       handleDepartmentClick={handleDepartmentClick}
                     />
                   );
