@@ -40,16 +40,16 @@ function Testimonial({
 }) {
   return (
     <div className="flex flex-col">
-      <p className="mb-10 text-[2.75rem] text-bico-gray-400 dark:text-white">
+      <p className="mb-10 text-center text-[2.75rem] text-bico-gray-400 dark:text-white lg:text-left">
         {testimonial.description}
       </p>
-      <div className="mb-6 h-[100px] w-[100px]">
+      <div className="mb-6 flex h-[100px] w-full justify-center lg:justify-start">
         <Image src={testimonial.avatar} alt={testimonial.name} />
       </div>
-      <span className="mb-2 text-[2.75rem] font-bold text-bico-gray-400 dark:text-white">
+      <span className="mb-2 text-center text-[2.75rem] font-bold text-bico-gray-400 dark:text-white lg:text-left">
         {testimonial.name}
       </span>
-      <span className="text-2xl font-bold text-bico-gray-400 dark:text-white">
+      <span className="text-center text-2xl font-bold text-bico-gray-400 dark:text-white lg:text-left">
         {testimonial.designation}
       </span>
     </div>
@@ -70,20 +70,20 @@ function WhatItsLike() {
   }, []);
 
   return (
-    <article className="my-[12.5rem] flex items-start justify-between">
-      <div>
-        <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
+    <article className="my-16 flex flex-col justify-center lg:my-[12.5rem] lg:flex-row lg:items-start lg:justify-between">
+      <div className="mb-12 lg:mb-0">
+        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
           What
         </h2>
-        <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
+        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
           It&apos;s
         </h2>
-        <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
+        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
           Like
         </h2>
       </div>
 
-      <div className="relative grid grid-cols-[870px]">
+      <div className="relative grid grid-cols-1 lg:grid-cols-[870px]">
         <motion.div
           key={testimonialIndex}
           initial={{ opacity: 0 }}

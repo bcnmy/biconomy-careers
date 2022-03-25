@@ -21,7 +21,7 @@ const cultureImages = [
 function ImageDescription({ text }: { text: string }) {
   return (
     <div className="mx-auto flex h-[100px] w-[calc(100%-20px)] items-center justify-center rounded-[40px] bg-culture-image-desc backdrop-blur-xl">
-      <p className="text-2xl font-bold text-white">{text}</p>
+      <p className="text-base font-bold text-white lg:text-2xl">{text}</p>
     </div>
   );
 }
@@ -42,13 +42,13 @@ function Culture() {
   return (
     <article
       id="culture"
-      className="my-[12.5rem] flex items-start justify-between"
+      className="my-16 flex flex-col justify-center lg:my-[12.5rem] lg:flex-row lg:items-start lg:justify-between"
     >
       <div>
-        <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
+        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
           Culture
         </h2>
-        <p className="text-sm font-bold text-bico-gray-400 dark:text-white">
+        <p className="text-center text-sm font-bold text-bico-gray-400 dark:text-white lg:text-left">
           We&apos;ve built a rock-solid cuture at Biconomy
           <br />
           by valuing all sorts of things! But we particularly
@@ -66,7 +66,7 @@ function Culture() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="relative h-[870px] w-[870px] overflow-hidden rounded-[3.125rem] bg-[#212325]"
+        className="relative mt-12 h-[374px] w-full overflow-hidden rounded-[3.125rem] bg-[#212325] lg:mt-0 lg:h-[870px] lg:w-[870px]"
       >
         <Image
           src={cultureImages[imageIndex]}

@@ -6,7 +6,7 @@ import { useTheme } from 'next-themes';
 
 function NavItem({ children }: { children: React.ReactNode }) {
   return (
-    <li className="mr-12 cursor-pointer text-2xl font-bold text-bico-gray-400 hover:text-bico-orange dark:text-white dark:hover:text-bico-orange">
+    <li className="mr-12 hidden cursor-pointer text-2xl font-bold text-bico-gray-400 hover:text-bico-orange dark:text-white dark:hover:text-bico-orange md:block">
       {children}
     </li>
   );
@@ -16,12 +16,12 @@ function Header() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="container mx-auto flex items-center justify-between pt-24">
+    <header className="container mx-auto flex items-center justify-between px-2 pt-6 md:pt-24">
       <a href="#">
-        <div className="block dark:hidden">
+        <div className="h-lg: md:w-lg: block w-64 dark:hidden">
           <Image src={careersLogoLight} alt="Biconomy careers" />
         </div>
-        <div className="hidden dark:block">
+        <div className="h-lg: md:w-lg: hidden w-64 dark:block">
           <Image src={careersLogoDark} alt="Biconomy careers" />
         </div>
       </a>

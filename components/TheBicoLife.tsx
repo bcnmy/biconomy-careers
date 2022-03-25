@@ -49,16 +49,16 @@ function Perk({
 }) {
   return (
     <div className="mb-28 w-full">
-      <p className="mb-6 text-7xl">{perk.emoji}</p>
+      <p className="mb-6 text-center text-7xl lg:text-left">{perk.emoji}</p>
       {perk.title.map((word, index) => (
         <p
           key={index}
-          className="break-words text-[2.75rem] font-bold leading-none text-bico-gray-400 dark:text-white"
+          className="break-words text-center text-[2.75rem] font-bold leading-none text-bico-gray-400 dark:text-white lg:text-left"
         >
           {word}
         </p>
       ))}
-      <p className="mt-6 pr-24 text-sm font-bold text-bico-gray-400 dark:text-white">
+      <p className="mt-6 text-center text-sm font-bold text-bico-gray-400 dark:text-white lg:pr-24 lg:text-left">
         {perk.description}
       </p>
     </div>
@@ -67,20 +67,20 @@ function Perk({
 
 function TheBicoLife() {
   return (
-    <article className="my-[12.5rem] flex items-start justify-between">
-      <div>
-        <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
+    <article className="my-16 flex flex-col justify-center lg:my-[12.5rem] lg:flex-row lg:items-start lg:justify-between">
+      <div className="mb-12 lg:mb-0">
+        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
           The
         </h2>
-        <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
+        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
           Bico
         </h2>
-        <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
+        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
           Life
         </h2>
       </div>
 
-      <div className="grid grid-cols-[430px_430px] gap-2.5">
+      <div className="grid grid-cols-1 gap-2.5 lg:grid-cols-[430px_430px]">
         {perks.map((perk, index) => (
           <Perk key={index} perk={perk} />
         ))}

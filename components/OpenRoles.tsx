@@ -98,20 +98,20 @@ function OpenRoles() {
   return (
     <article
       id="open-roles"
-      className="my-[12.5rem] flex items-start justify-between"
+      className="my-16 flex flex-col justify-center lg:my-[12.5rem] lg:flex-row lg:items-start lg:justify-between"
     >
-      <div>
-        <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
+      <div className="mb-12 lg:mb-0">
+        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
           Open
         </h2>
-        <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
+        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
           Roles
         </h2>
-        <p className="mb-8 text-sm font-bold text-bico-gray-400 dark:text-white">
+        <p className="mb-8 text-center text-sm font-bold text-bico-gray-400 dark:text-white lg:text-left">
           We are always looking forward to make new
           <br /> frens in building the future of web3.
         </p>
-        <div className="flex w-[430px] flex-wrap gap-2.5">
+        <div className="flex w-full flex-wrap justify-center gap-2.5 lg:w-[430px]">
           {!departmentsData ? (
             <span className="text-hyphen-gray-400 text-lg font-bold dark:text-white">
               Getting all available departments!
@@ -157,7 +157,7 @@ function OpenRoles() {
         </div>
       </div>
 
-      <div className="grid grid-cols-[870px]">
+      <div className="relative grid grid-cols-1 lg:grid-cols-[870px]">
         {!jobsData ? (
           <span className="text-hyphen-gray-400 text-[2.75rem] dark:text-white">
             Getting all those awesome roles at Biconomy!
