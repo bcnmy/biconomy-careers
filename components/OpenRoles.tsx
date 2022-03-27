@@ -81,11 +81,11 @@ function Job({
 
 function OpenRoles() {
   const { data: departmentsData, error: departmentsError } = useSWR(
-    'https://www.workable.com/api/accounts/biconomy-labs-pte-ltd/departments',
+    'https://apply.workable.com/api/v1/widget/accounts/biconomy-labs-pte-ltd/departments',
     fetcher,
   );
   const { data: jobsData, error: jobsError } = useSWR(
-    'https://www.workable.com/api/accounts/biconomy-labs-pte-ltd',
+    'https://apply.workable.com/api/v1/widget/accounts/biconomy-labs-pte-ltd',
     fetcher,
   );
   const { jobs } = jobsData || {};
