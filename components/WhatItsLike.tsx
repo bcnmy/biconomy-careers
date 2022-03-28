@@ -70,7 +70,7 @@ function WhatItsLike() {
   }, []);
 
   return (
-    <article className="my-16 flex flex-col justify-center lg:my-[12.5rem] lg:flex-row lg:items-start lg:justify-between">
+    <article className="container mx-auto my-16 flex flex-col justify-center lg:my-[12.5rem] lg:flex-row lg:items-start lg:justify-between">
       <div className="mb-12 lg:mb-0">
         <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
           What

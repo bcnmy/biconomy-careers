@@ -8,6 +8,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-image': "url('/hero.png')",
+      },
       colors: {
         'bico-orange': '#d85111',
         'bico-gray': {

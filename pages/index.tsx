@@ -20,8 +20,8 @@ const Home: NextPage = () => {
 
       <Header />
 
-      <main className="container mx-auto px-2">
-        {/* <Hero /> */}
+      <main>
+        <Hero />
         <Culture />
         <TheBicoLife />
         <WhatItsLike />

@@ -98,7 +98,7 @@ function OpenRoles() {
   return (
     <article
       id="open-roles"
-      className="my-16 flex flex-col justify-center lg:my-[12.5rem] lg:flex-row lg:items-start lg:justify-between"
+      className="container mx-auto my-16 flex flex-col justify-center lg:my-[12.5rem] lg:flex-row lg:items-start lg:justify-between"
     >
       <div className="mb-12 lg:mb-0">
         <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
@@ -111,17 +111,17 @@ function OpenRoles() {
           We are always looking forward to make new
           <br /> frens in building the future of web3.
         </p>
-        <div className="flex w-full flex-wrap justify-center gap-2.5 lg:w-[430px] lg:justify-start">
-          {!departmentsData ? (
-            <span className="text-hyphen-gray-400 text-lg font-bold dark:text-white">
-              Getting all available departments!
-            </span>
-          ) : null}
-
+        <div className="flex w-full flex-wrap justify-center gap-2.5 lg:w-[360px] lg:justify-start">
           {departmentsError ? (
             <span className="text-hyphen-gray-400 text-lg font-bold dark:text-white">
               Oops! something went wrong while getting the list of departments.
               Please try again later 🙁
+            </span>
+          ) : null}
+
+          {!departmentsData ? (
+            <span className="text-hyphen-gray-400 text-lg font-bold dark:text-white">
+              Getting all available departments!
             </span>
           ) : null}
 
@@ -158,16 +158,16 @@ function OpenRoles() {
       </div>
 
       <div className="relative grid grid-cols-1 lg:grid-cols-[870px]">
-        {!jobsData ? (
-          <span className="text-hyphen-gray-400 text-[2.75rem] dark:text-white">
-            Getting all those awesome roles at Biconomy!
-          </span>
-        ) : null}
-
         {jobsError ? (
           <span className="text-hyphen-gray-400 text-[2.75rem] dark:text-white">
             Oops! something went wrong while getting the list of roles. Please
             try again later 🙁
+          </span>
+        ) : null}
+
+        {!jobsData ? (
+          <span className="text-hyphen-gray-400 text-[2.75rem] dark:text-white">
+            Getting all those awesome roles at Biconomy!
           </span>
         ) : null}
 

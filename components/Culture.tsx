@@ -42,7 +42,7 @@ function Culture() {
   return (
     <article
       id="culture"
-      className="my-16 flex flex-col justify-center lg:my-[12.5rem] lg:flex-row lg:items-start lg:justify-between"
+      className="container mx-auto my-16 flex flex-col justify-center lg:my-[12.5rem] lg:flex-row lg:items-start lg:justify-between"
     >
       <div>
         <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
