@@ -20,7 +20,7 @@ function Hero() {
   }
 
   return (
-    <article className="container relative mx-auto mt-24 h-[62.25rem] justify-center px-2">
+    <article className="container relative mx-auto mt-24 mb-20 h-[62.25rem] justify-center px-2">
       <div className="flex flex-col items-center">
         <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
           Join The
