@@ -20,8 +20,8 @@ const cultureImages = [
 
 function ImageDescription({ text }: { text: string }) {
   return (
-    <div className="mx-auto flex h-[100px] w-[calc(100%-20px)] items-center justify-center rounded-[40px] bg-culture-image-desc backdrop-blur-xl">
-      <p className="text-base font-bold text-white lg:text-2xl">{text}</p>
+    <div className="mx-auto flex h-[68px] w-[calc(100%-20px)] items-center justify-center rounded-[40px] bg-culture-image-desc backdrop-blur-xl lg:h-[100px]">
+      <p className="text-sm font-bold text-white lg:text-base">{text}</p>
     </div>
   );
 }
@@ -42,13 +42,13 @@ function Culture() {
   return (
     <article
       id="culture"
-      className="container mx-auto mb-40 flex flex-col justify-center lg:flex-row lg:items-start lg:justify-between"
+      className="container mx-auto mb-24 flex flex-col justify-center px-8 lg:mb-40 lg:flex-row lg:items-start lg:justify-between"
     >
       <div>
-        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
+        <h2 className="mb-6 text-4xl font-bold text-bico-gray-400 dark:text-white lg:text-8xl">
           Culture
         </h2>
-        <p className="text-center text-sm font-bold text-bico-gray-400 dark:text-white lg:text-left">
+        <p className="mb-12 text-sm font-bold text-bico-gray-400 dark:text-white">
           We&apos;ve built a rock-solid cuture at Biconomy
           <br />
           by valuing all sorts of things! But we particularly
@@ -66,7 +66,7 @@ function Culture() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="relative mt-12 h-[374px] w-full overflow-hidden rounded-[3.125rem] bg-[#212325] lg:mt-0 lg:h-[870px] lg:w-[870px]"
+        className="relative h-[320px] w-full overflow-hidden rounded-[3.125rem] bg-[#212325] dark:bg-bico-gray-400 lg:h-[870px] lg:w-[870px]"
       >
         <Image
           src={cultureImages[imageIndex]}

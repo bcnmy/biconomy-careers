@@ -11,92 +11,95 @@ import discordLogoDark from '../assets/images/discord-logo-dark.svg';
 
 function Footer() {
   return (
-    <footer className="h-[18.75rem] w-full bg-bico-gray-300">
-      <div className="container relative mx-auto flex h-full items-center justify-center">
-        <div className="absolute left-0">
-          <a href="https://biconomy.io">
-            <div className="block dark:hidden">
-              <Image src={biconomyLogoLight} alt="Biconomy" />
-            </div>
-            <div className="hidden dark:block">
-              <Image src={biconomyLogoDark} alt="Biconomy" />
-            </div>
-          </a>
-        </div>
-
-        <nav>
-          <ul className="flex items-center">
-            <li className="mr-14 text-2xl font-bold text-white dark:text-[#212325]">
-              <a
-                href="https://medium.com/biconomy"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Blog
-              </a>
-            </li>
-            <li className="mr-14 text-2xl font-bold text-white dark:text-[#212325]">
-              <a
-                href="https://docs.biconomy.io/comm/contact-us"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contact
-              </a>
-            </li>
-            <li className="mr-14 text-2xl font-bold text-white dark:text-[#212325]">
-              <a
-                href="https://twitter.com/biconomy"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="block dark:hidden">
-                  <Image src={twitterLogoLight} alt="Twitter" />
-                </div>
-                <div className="hidden dark:block">
-                  <Image src={twitterLogoDark} alt="Twitter" />
-                </div>
-              </a>
-            </li>
-            <li className="mr-14 text-2xl font-bold text-white dark:text-[#212325]">
-              <a
-                href="https://t.me/biconomy"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="block dark:hidden">
-                  <Image src={telegramLogoLight} alt="Telegram" />
-                </div>
-                <div className="hidden dark:block">
-                  <Image src={telegramLogoDark} alt="Telegram" />
-                </div>
-              </a>
-            </li>
-            <li className="text-2xl font-bold text-white dark:text-[#212325]">
-              <a
-                href="https://discord.com/invite/HKHxgyEExQ"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="block dark:hidden">
-                  <Image src={discordLogoLight} alt="Discord" />
-                </div>
-                <div className="hidden dark:block">
-                  <Image src={discordLogoDark} alt="Discord" />
-                </div>
-              </a>
-            </li>
-          </ul>
-        </nav>
-
+    <footer className="h-[9.375rem] w-full bg-bico-gray-300 lg:h-[18.75rem]">
+      <div className="container mx-auto grid h-full grid-cols-3 items-center px-8">
         <a
           href="https://biconomy.io"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute right-0 text-2xl font-bold text-white dark:text-[#212325]"
+          className="h-[50px] w-[38px] lg:h-auto lg:w-auto"
         >
-          © 2022 // Biconomy.io
+          <div className="block dark:hidden">
+            <Image src={biconomyLogoLight} alt="Biconomy" />
+          </div>
+          <div className="hidden dark:block">
+            <Image src={biconomyLogoDark} alt="Biconomy" />
+          </div>
         </a>
+
+        <div className="col-span-2 grid grid-cols-1 lg:grid-cols-2">
+          <nav className="mb-4 justify-self-center lg:mb-0">
+            <ul className="flex items-center">
+              <li className="mr-5 text-sm font-bold text-white dark:text-[#212325] lg:mr-14 lg:text-2xl">
+                <a
+                  href="https://medium.com/biconomy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Blog
+                </a>
+              </li>
+              <li className="mr-5 text-sm font-bold text-white dark:text-[#212325] lg:mr-14 lg:text-2xl">
+                <a
+                  href="https://docs.biconomy.io/comm/contact-us"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Contact
+                </a>
+              </li>
+              <li className="mr-5 text-sm font-bold text-white dark:text-[#212325] lg:mr-14 lg:text-2xl">
+                <a
+                  href="https://twitter.com/biconomy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex dark:hidden">
+                    <Image src={twitterLogoLight} alt="Twitter" />
+                  </div>
+                  <div className="hidden dark:flex">
+                    <Image src={twitterLogoDark} alt="Twitter" />
+                  </div>
+                </a>
+              </li>
+              <li className="mr-5 text-sm font-bold text-white dark:text-[#212325] lg:mr-14 lg:text-2xl">
+                <a
+                  href="https://t.me/biconomy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex dark:hidden">
+                    <Image src={telegramLogoLight} alt="Telegram" />
+                  </div>
+                  <div className="hidden dark:flex">
+                    <Image src={telegramLogoDark} alt="Telegram" />
+                  </div>
+                </a>
+              </li>
+              <li className="text-sm font-bold text-white dark:text-[#212325] lg:text-2xl">
+                <a
+                  href="https://discord.com/invite/HKHxgyEExQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex dark:hidden">
+                    <Image src={discordLogoLight} alt="Discord" />
+                  </div>
+                  <div className="hidden dark:flex">
+                    <Image src={discordLogoDark} alt="Discord" />
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <a
+            href="https://biconomy.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="justify-self-end text-xs font-bold text-white dark:text-[#212325] lg:text-2xl"
+          >
+            © 2022 // Biconomy.io
+          </a>
+        </div>
       </div>
     </footer>
   );

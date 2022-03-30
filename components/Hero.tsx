@@ -1,7 +1,4 @@
 import { useState } from 'react';
-import Image from 'next/image';
-
-import hero from '../assets/images/hero.png';
 
 function Hero() {
   const [position, setPosition] = useState<{
@@ -20,18 +17,16 @@ function Hero() {
   }
 
   return (
-    <article className="container relative mx-auto mt-24 mb-20 h-[62.25rem] justify-center px-2">
+    <article className="container relative mx-auto mt-8 mb-16 h-[18rem] justify-center lg:mt-24 lg:mb-20 lg:h-[62.25rem]">
       <div className="flex flex-col items-center">
-        <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
-          Join The
-        </h2>
-        <h2 className="text-8xl font-bold text-bico-gray-400 dark:text-white">
+        <h2 className="text-center text-4xl font-bold text-bico-gray-400 dark:text-white lg:text-8xl">
+          Join The <br />
           Biconauts
         </h2>
       </div>
 
       <div
-        className="absolute top-0 h-full w-full bg-hero-image bg-contain bg-[center_top_1rem] bg-no-repeat"
+        className="absolute top-0 h-full w-full bg-hero-image bg-contain bg-[center_top_2.5rem] bg-no-repeat"
         style={{
           backgroundPosition:
             position.pageX && position.pageX > 0

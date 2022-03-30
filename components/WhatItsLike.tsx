@@ -2,15 +2,17 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
+import divyaAvatar from '../assets/images/biconauts/divya.svg';
 import lovejeetAvatar from '../assets/images/biconauts/lovejeet.svg';
+import adityaAvatar from '../assets/images/biconauts/aditya.svg';
 
 const testimonials = [
   {
     description:
       'Have been in Biconomy for almost 3 years, what I love is being challenged & motivated to always innovate. The work here is never boring, lot of opportunities to explore new technology, experiment & learn. Over these years, got the opportunity to work in almost all the domains which helped me to push my limits. Along with the work culture, team dynamics also make us feel at home. Love the donut calls, gaming nights, surprise gifts 🙂',
-    avatar: lovejeetAvatar,
+    avatar: divyaAvatar,
     name: 'Divya Nailwal',
-    designation: 'Software Engineer',
+    designation: 'Blockchain Developer',
   },
   {
     description:
@@ -22,9 +24,9 @@ const testimonials = [
   {
     description:
       "Working at Biconomy is fast paced, exhilarating & absolutely non-stop. We are building at the cutting edge of web3. Thus, everyone is solving exciting problems never tackled before. There's no playbook. We navigate in uncharted territories!",
-    avatar: lovejeetAvatar,
+    avatar: adityaAvatar,
     name: 'Aditya Khanduri',
-    designation: 'Product Manager',
+    designation: 'Head of Marketing & Community',
   },
 ];
 
@@ -40,16 +42,16 @@ function Testimonial({
 }) {
   return (
     <div className="flex flex-col">
-      <p className="mb-10 text-center text-[2.75rem] text-bico-gray-400 dark:text-white lg:text-left">
+      <p className="mb-8 text-2xl leading-normal text-bico-gray-400 dark:text-white lg:text-[2.75rem]">
         {testimonial.description}
       </p>
-      <div className="mb-6 flex h-[100px] w-full justify-center lg:justify-start">
+      <div className="mb-6 h-[100px] w-[100px]">
         <Image src={testimonial.avatar} alt={testimonial.name} />
       </div>
-      <span className="mb-2 text-center text-[2.75rem] font-bold text-bico-gray-400 dark:text-white lg:text-left">
+      <span className="text-3xl font-bold leading-normal text-bico-gray-400 dark:text-white lg:text-[2.75rem]">
         {testimonial.name}
       </span>
-      <span className="text-center text-2xl font-bold text-bico-gray-400 dark:text-white lg:text-left">
+      <span className="text-base font-bold leading-normal text-bico-gray-400 dark:text-white lg:text-2xl">
         {testimonial.designation}
       </span>
     </div>
@@ -70,15 +72,11 @@ function WhatItsLike() {
   }, []);
 
   return (
-    <article className="container mx-auto mb-40 flex flex-col justify-center lg:flex-row lg:items-start lg:justify-between">
+    <article className="container mx-auto mb-20 flex flex-col justify-center px-8 lg:mb-40 lg:flex-row lg:items-start lg:justify-between">
       <div className="mb-12 lg:mb-0">
-        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
-          What
-        </h2>
-        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
-          It&apos;s
-        </h2>
-        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
+        <h2 className="text-4xl font-bold text-bico-gray-400 dark:text-white lg:text-8xl">
+          What <br className="hidden lg:block" />
+          It&apos;s <br className="hidden lg:block" />
           Like
         </h2>
       </div>

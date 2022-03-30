@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import OpenRoles from '../components/OpenRoles';
-import TheBicoLife from '../components/TheBicoLife';
+import LifeAtBiconomy from '../components/LifeAtBiconomy';
 import WhatItsLike from '../components/WhatItsLike';
 
 const Home: NextPage = () => {
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       <main>
         <Hero />
         <Culture />
-        <TheBicoLife />
+        <LifeAtBiconomy />
         <WhatItsLike />
         <OpenRoles />
       </main>

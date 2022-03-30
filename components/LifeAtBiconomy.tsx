@@ -25,9 +25,9 @@ const perks = [
     emoji: '😌',
   },
   {
-    title: ['Great', 'Salary'],
+    title: ['Become', 'Pioneers'],
     description:
-      "Compensation in line with the web3 standards. And rewards? So good, you wouldn't believe.",
+      'The whole space is so nascent that there are no playbooks. Venture into uncharted territory & create benchmarks for the whole industry!',
     emoji: '🤑',
   },
   {
@@ -48,37 +48,31 @@ function Perk({
   };
 }) {
   return (
-    <div className="mb-28 w-full">
-      <p className="mb-6 text-center text-7xl lg:text-left">{perk.emoji}</p>
+    <div className="mb-12 w-full lg:mb-28">
+      <p className="mb-6 text-7xl">{perk.emoji}</p>
       {perk.title.map((word, index) => (
         <p
           key={index}
-          className="break-words text-center text-[2.75rem] font-bold leading-none text-bico-gray-400 dark:text-white lg:text-left"
+          className="break-words text-3xl font-bold leading-none text-bico-gray-400 dark:text-white lg:text-[2.75rem]"
         >
           {word}
         </p>
       ))}
-      <p className="mt-6 text-center text-sm font-bold text-bico-gray-400 dark:text-white lg:pr-24 lg:text-left">
+      <p className="mt-4 text-sm font-bold text-bico-gray-400 dark:text-white lg:pr-24">
         {perk.description}
       </p>
     </div>
   );
 }
 
-function TheBicoLife() {
+function LifeAtBiconomy() {
   return (
-    <article className="container mx-auto mb-12 flex flex-col justify-center lg:flex-row lg:items-start lg:justify-between">
-      <div className="mb-12 lg:mb-0">
-        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
-          The
-        </h2>
-        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
-          Bico
-        </h2>
-        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
-          Life
-        </h2>
-      </div>
+    <article className="container mx-auto mb-12 flex flex-col justify-center px-8 lg:flex-row lg:items-start lg:justify-between">
+      <h2 className="mb-12 text-4xl font-bold text-bico-gray-400 dark:text-white lg:text-8xl">
+        Life <br className="hidden lg:block" />
+        at <br className="hidden lg:block" />
+        Biconomy
+      </h2>
 
       <div className="grid grid-cols-1 gap-2.5 lg:grid-cols-[430px_430px]">
         {perks.map((perk, index) => (
@@ -89,4 +83,4 @@ function TheBicoLife() {
   );
 }
 
-export default TheBicoLife;
+export default LifeAtBiconomy;

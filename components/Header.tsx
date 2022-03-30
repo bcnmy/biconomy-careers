@@ -16,12 +16,12 @@ function Header() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="container mx-auto flex items-center justify-between px-2 pt-6 md:pt-24">
+    <header className="container mx-auto flex items-center justify-between px-8 pt-6 md:pt-24">
       <a href="#">
-        <div className="h-lg: md:w-lg: block w-64 dark:hidden">
+        <div className="h-lg: md:w-lg: -ml-1.5 block w-64 dark:hidden">
           <Image src={careersLogoLight} alt="Biconomy careers" />
         </div>
-        <div className="h-lg: md:w-lg: hidden w-64 dark:block">
+        <div className="h-lg: md:w-lg: -ml-1.5 hidden w-64 dark:block">
           <Image src={careersLogoDark} alt="Biconomy careers" />
         </div>
       </a>

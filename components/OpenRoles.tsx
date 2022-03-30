@@ -51,13 +51,13 @@ function Job({
       className="group mb-14 cursor-pointer"
     >
       <div className="mb-2 flex items-center justify-between">
-        <p className="text-[2.75rem] text-bico-gray-400 group-hover:text-bico-orange dark:text-white">
+        <p className="text-2xl text-bico-gray-400 group-hover:text-bico-orange dark:text-white lg:text-[2.75rem]">
           {title}
         </p>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-10 w-10 text-bico-gray-400 group-hover:text-bico-orange dark:text-white"
+          className="h-6 w-6 text-bico-gray-400 group-hover:text-bico-orange dark:text-white lg:h-10 lg:w-10"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -71,9 +71,11 @@ function Job({
         </svg>
       </div>
       <div className="mb-6 h-px w-full bg-bico-gray-400 dark:bg-white"></div>
-      <p className="flex items-center text-2xl font-bold text-bico-gray-400 dark:text-white">
+      <p className="flex items-center text-sm font-bold text-bico-gray-400 dark:text-white lg:text-2xl">
         {location}
-        {telecommuting ? <span className="ml-6 text-[18px]">🌎</span> : null}
+        {telecommuting ? (
+          <span className="ml-6 text-[10px] lg:text-[18px]">🌎</span>
+        ) : null}
       </p>
     </a>
   );
@@ -98,40 +100,32 @@ function OpenRoles() {
   return (
     <article
       id="open-roles"
-      className="container mx-auto mb-40 flex flex-col justify-center lg:flex-row lg:items-start lg:justify-between"
+      className="container mx-auto mb-20 flex flex-col justify-center px-8 lg:mb-40 lg:flex-row lg:items-start lg:justify-between"
     >
-      <div className="mb-12 lg:mb-0">
-        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
-          Open
-        </h2>
-        <h2 className="text-center text-6xl font-bold text-bico-gray-400 dark:text-white lg:text-left lg:text-8xl">
+      <div>
+        <h2 className="mb-6 text-4xl font-bold text-bico-gray-400 dark:text-white lg:text-8xl">
+          Open <br className="hidden lg:block" />
           Roles
         </h2>
-        <p className="mb-8 text-center text-sm font-bold text-bico-gray-400 dark:text-white lg:text-left">
+        <p className="mb-6 text-sm font-bold text-bico-gray-400 dark:text-white">
           We are always looking forward to make new
           <br /> frens in building the future of web3.
         </p>
-        <div className="flex w-full flex-wrap justify-center gap-2.5 lg:w-[360px] lg:justify-start">
+        <div className="mb-12 flex w-full flex-wrap gap-2.5 lg:w-[360px]">
           {departmentsError ? (
-            <span className="text-hyphen-gray-400 text-lg font-bold dark:text-white">
+            <span className="text-lg font-bold text-bico-gray-400 dark:text-white">
               Oops! something went wrong while getting the list of departments.
               Please try again later 🙁
             </span>
           ) : null}
 
           {!departmentsData ? (
-            <span className="text-hyphen-gray-400 text-lg font-bold dark:text-white">
+            <span className="text-lg font-bold text-bico-gray-400 dark:text-white">
               Getting all available departments!
             </span>
           ) : null}
 
-          {departmentsData && departmentsData.length === 0 ? (
-            <span className="text-hyphen-gray-400 text-lg font-bold dark:text-white">
-              No departments found. Please try again later. 🙁
-            </span>
-          ) : null}
-
-          {departmentsData ? (
+          {departmentsData && departmentsData.length > 0 ? (
             <>
               <Department
                 name="All"
@@ -159,22 +153,22 @@ function OpenRoles() {
 
       <div className="relative grid grid-cols-1 lg:grid-cols-[870px]">
         {jobsError ? (
-          <span className="text-hyphen-gray-400 text-[2.75rem] dark:text-white">
+          <span className="text-2xl leading-normal text-bico-gray-400 dark:text-white lg:text-[2.75rem]">
             Oops! something went wrong while getting the list of roles. Please
-            try again later 🙁
+            try later 🙁
           </span>
         ) : null}
 
         {!jobsData ? (
-          <span className="text-hyphen-gray-400 text-[2.75rem] dark:text-white">
+          <span className="text-2xl leading-normal text-bico-gray-400 dark:text-white lg:text-[2.75rem]">
             Getting all those awesome roles at Biconomy!
           </span>
         ) : null}
 
         {jobs && jobs.length === 0 ? (
-          <span className="text-hyphen-gray-400 text-[2.75rem] dark:text-white">
-            There are no positions to apply for at the moment. Please try again
-            later. 🙁
+          <span className="text-2xl leading-normal text-bico-gray-400 dark:text-white lg:text-[2.75rem]">
+            There are no positions to apply for at the moment. Please try later.
+            🙁
           </span>
         ) : null}
 
