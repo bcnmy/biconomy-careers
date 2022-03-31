@@ -3,35 +3,50 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 import culture1 from '../assets/images/culture/culture-1.png';
-import culture2 from '../assets/images/culture/culture-2.jpg';
-import culture3 from '../assets/images/culture/culture-3.jpg';
-import culture4 from '../assets/images/culture/culture-4.jpg';
-import culture5 from '../assets/images/culture/culture-5.jpg';
-import culture6 from '../assets/images/culture/culture-6.jpg';
+import culture2 from '../assets/images/culture/culture-2.png';
+import culture3 from '../assets/images/culture/culture-3.png';
+import culture4 from '../assets/images/culture/culture-4.png';
+import culture5 from '../assets/images/culture/culture-5.png';
 
-const cultureImages = [
-  culture1,
-  culture2,
-  culture3,
-  culture4,
-  culture5,
-  culture6,
+const moments = [
+  {
+    img: culture1,
+    description: 'Yash & Aditya visiting the Himalayas, IN',
+  },
+  {
+    img: culture2,
+    description: 'Preparing for the BICO token launch in Mussoorie, IN',
+  },
+  {
+    img: culture3,
+    description: 'Trevor getting ready to ski in Skopje, North Macedonia',
+  },
+  {
+    img: culture4,
+    description: 'Biconauts w̶o̶r̶k̶i̶n̶g̶ vacationing in Dubai',
+  },
+  {
+    img: culture5,
+    description: 'Team India chilling in Delhi, IN',
+  },
 ];
 
 function ImageDescription({ text }: { text: string }) {
   return (
-    <div className="mx-auto flex h-[68px] w-[calc(100%-20px)] items-center justify-center rounded-[40px] bg-culture-image-desc backdrop-blur-xl lg:h-[100px]">
-      <p className="text-sm font-bold text-white lg:text-base">{text}</p>
+    <div className="mx-auto flex h-[68px] w-[calc(100%-20px)] items-center justify-center rounded-[12px] bg-culture-image-desc backdrop-blur-xl lg:h-[100px] lg:rounded-[40px]">
+      <p className="text-center text-sm font-bold text-white lg:text-base">
+        {text}
+      </p>
     </div>
   );
 }
 
 function Culture() {
-  const [imageIndex, setImageIndex] = useState(0);
+  const [momentIndex, setMomentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setImageIndex(prevIndex => (prevIndex + 1) % cultureImages.length);
+      setMomentIndex(prevIndex => (prevIndex + 1) % moments.length);
     }, 5000);
 
     return () => {
@@ -62,21 +77,21 @@ function Culture() {
       </div>
 
       <motion.div
-        key={imageIndex}
+        key={momentIndex}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="relative h-[320px] w-full overflow-hidden rounded-[3.125rem] bg-[#212325] dark:bg-bico-gray-400 lg:h-[870px] lg:w-[870px]"
+        className="relative h-[240px] w-full overflow-hidden lg:h-[650px] lg:w-[870px]"
       >
         <Image
-          src={cultureImages[imageIndex]}
+          src={moments[momentIndex].img}
           alt="Culture"
           layout="fill"
           objectFit="contain"
           placeholder="blur"
         />
-        <div className="absolute bottom-[10px] w-full">
-          <ImageDescription text="Yash & Aditya visiting the Himalayas, IN." />
+        <div className="absolute bottom-[8px] w-full lg:bottom-[10px]">
+          <ImageDescription text={moments[momentIndex].description} />
         </div>
       </motion.div>
     </article>

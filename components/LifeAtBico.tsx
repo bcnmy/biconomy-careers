@@ -26,7 +26,7 @@ const perks = [
     title: ['Become', 'Pioneers'],
     description:
       'The whole space is so nascent that there are no playbooks. Venture into uncharted territory & create benchmarks for the whole industry!',
-    emoji: '🤑',
+    emoji: '🚀',
   },
   {
     title: ['Team', 'Bonding'],

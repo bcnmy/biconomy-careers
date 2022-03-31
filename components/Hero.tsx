@@ -30,9 +30,9 @@ function Hero() {
         style={{
           backgroundPosition:
             position.pageX && position.pageX > 0
-              ? `left -${position.pageX * 0.05}px top 1rem`
+              ? `left -${position.pageX * 0.05}px top 2.5rem`
               : position.pageX && position.pageX < 0
-              ? `right ${position.pageX * 0.05}px top 1rem`
+              ? `right ${position.pageX * 0.05}px top 2.5rem`
               : '',
         }}
         onMouseMove={handleMouseMove}
