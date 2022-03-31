@@ -3,55 +3,119 @@ import Image from 'next/image';
 import careersLogoLight from '../assets/images/careers-logo-light.svg';
 import careersLogoDark from '../assets/images/careers-logo-dark.svg';
 import { useTheme } from 'next-themes';
-
-function NavItem({ children }: { children: React.ReactNode }) {
-  return (
-    <li className="mr-12 hidden cursor-pointer text-2xl font-bold text-bico-gray-400 hover:text-bico-orange dark:text-white dark:hover:text-bico-orange md:block">
-      {children}
-    </li>
-  );
-}
+import { useState } from 'react';
 
 function Header() {
   const { theme, setTheme } = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="container mx-auto flex items-center justify-between px-8 pt-6 md:pt-24">
-      <a href="#">
-        <div className="h-lg: md:w-lg: -ml-1.5 block w-64 dark:hidden">
-          <Image src={careersLogoLight} alt="Biconomy careers" />
-        </div>
-        <div className="h-lg: md:w-lg: -ml-1.5 hidden w-64 dark:block">
-          <Image src={careersLogoDark} alt="Biconomy careers" />
-        </div>
-      </a>
+    <header
+      className={`${
+        isOpen
+          ? 'fixed top-0 left-0 z-10 h-screen w-screen bg-bico-gray-400'
+          : ''
+      } container mx-auto px-8 pt-6 md:pt-24 lg:flex lg:items-center lg:justify-between`}
+    >
+      <div
+        className={`${
+          isOpen ? 'mb-12' : ''
+        } flex w-full items-center justify-between`}
+      >
+        <a href="#">
+          <div
+            className={`-ml-1.5 h-8 w-[172px] dark:hidden lg:h-auto lg:w-[310px] ${
+              isOpen ? 'hidden' : 'flex'
+            }`}
+          >
+            <Image src={careersLogoLight} alt="Biconomy careers" />
+          </div>
+          <div
+            className={`-ml-1.5 h-8 w-[172px] dark:flex lg:h-auto lg:w-[310px] ${
+              isOpen ? 'flex' : 'hidden'
+            }`}
+          >
+            <Image src={careersLogoDark} alt="Biconomy careers" />
+          </div>
+        </a>
+
+        <button
+          className="flex lg:hidden"
+          onClick={() => setIsOpen(wasOpen => !wasOpen)}
+        >
+          {isOpen ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-bico-gray-400 dark:text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          )}
+        </button>
+      </div>
 
       <nav>
-        <ul className="flex items-center">
-          <NavItem>
-            <a href="#culture">Culture</a>
-          </NavItem>
-          <NavItem>
-            <a href="#open-roles">Roles</a>
-          </NavItem>
-          <NavItem>
+        <ul
+          className={`dark:text-white lg:flex lg:text-bico-gray-400 ${
+            isOpen ? 'flex flex-col text-white' : 'hidden'
+          }`}
+        >
+          <li className="mb-6 cursor-pointer border-b border-b-white pb-6 text-xl font-bold hover:text-bico-orange lg:mr-12 lg:mb-0 lg:border-none lg:pb-0 lg:text-2xl">
+            <a href="#culture" onClick={() => setIsOpen(false)}>
+              Culture
+            </a>
+          </li>
+          <li className="mb-6 cursor-pointer border-b border-b-white pb-6 text-xl font-bold hover:text-bico-orange lg:mr-12 lg:mb-0 lg:border-none lg:pb-0 lg:text-2xl">
+            <a href="#open-roles" onClick={() => setIsOpen(false)}>
+              Roles
+            </a>
+          </li>
+          <li className="mb-6 cursor-pointer border-b border-b-white pb-6 text-xl font-bold hover:text-bico-orange lg:mr-12 lg:mb-0 lg:border-none lg:pb-0 lg:text-2xl">
             <a
               href="https://docs.biconomy.io/comm/contact-us"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
             >
               Contact
             </a>
-          </NavItem>
-          <li>
+          </li>
+          <li className="mb-6 cursor-pointer border-b border-b-white pb-6 text-xl font-bold hover:text-bico-orange lg:mr-12 lg:mb-0 lg:border-none lg:pb-0 lg:text-2xl">
             <button
               aria-label="Toggle Dark Mode"
               type="button"
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              onClick={() => {
+                setTheme(theme === 'dark' ? 'light' : 'dark');
+                setIsOpen(false);
+              }}
+              className="flex h-8 w-8 items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="block h-6 w-6 text-bico-gray-400 hover:text-bico-orange dark:hidden"
+                className="flex h-6 w-6 dark:hidden"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -60,7 +124,7 @@ function Header() {
 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="hidden h-6 w-6 text-white hover:text-bico-orange dark:block"
+                className="hidden h-6 w-6 dark:flex"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
