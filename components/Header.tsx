@@ -111,7 +111,7 @@ function Header() {
                 setTheme(theme === 'dark' ? 'light' : 'dark');
                 setIsOpen(false);
               }}
-              className="flex h-8 w-8 items-center justify-center"
+              className="flex h-8 w-8 items-center justify-center lg:pb-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
