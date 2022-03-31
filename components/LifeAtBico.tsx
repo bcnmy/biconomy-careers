@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const perks = [
   {
     title: ['Remote-native', 'Team'],
@@ -65,13 +63,13 @@ function Perk({
   );
 }
 
-function LifeAtBiconomy() {
+function LifeAtBico() {
   return (
-    <article className="container mx-auto mb-12 flex flex-col justify-center px-8 lg:flex-row lg:items-start lg:justify-between">
+    <article className="container mx-auto mb-12 flex flex-col justify-center px-8 lg:flex-row lg:items-start lg:justify-between lg:px-0">
       <h2 className="mb-12 text-4xl font-bold text-bico-gray-400 dark:text-white lg:text-8xl">
         Life <br className="hidden lg:block" />
         at <br className="hidden lg:block" />
-        Biconomy
+        Bico
       </h2>
 
       <div className="grid grid-cols-1 gap-2.5 lg:grid-cols-[430px_430px]">
@@ -83,4 +81,4 @@ function LifeAtBiconomy() {
   );
 }
 
-export default LifeAtBiconomy;
+export default LifeAtBico;

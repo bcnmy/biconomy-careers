@@ -15,7 +15,7 @@ function Header() {
         isOpen
           ? 'fixed top-0 left-0 z-10 h-screen w-screen bg-bico-gray-400'
           : ''
-      } container mx-auto px-8 pt-6 md:pt-24 lg:flex lg:items-center lg:justify-between`}
+      } container mx-auto px-8 pt-6 md:pt-24 lg:flex lg:items-center lg:justify-between lg:px-0`}
     >
       <div
         className={`${
@@ -103,7 +103,7 @@ function Header() {
               Contact
             </a>
           </li>
-          <li className="mb-6 cursor-pointer border-b border-b-white pb-6 text-xl font-bold hover:text-bico-orange lg:mr-12 lg:mb-0 lg:border-none lg:pb-0 lg:text-2xl">
+          <li className="mb-6 cursor-pointer border-b border-b-white pb-6 text-xl font-bold hover:text-bico-orange lg:mb-0 lg:border-none lg:pb-0 lg:text-2xl">
             <button
               aria-label="Toggle Dark Mode"
               type="button"

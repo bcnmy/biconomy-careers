@@ -72,7 +72,7 @@ function WhatItsLike() {
   }, []);
 
   return (
-    <article className="container mx-auto mb-20 flex flex-col justify-center px-8 lg:mb-40 lg:flex-row lg:items-start lg:justify-between">
+    <article className="container mx-auto mb-20 flex flex-col justify-center px-8 lg:mb-40 lg:flex-row lg:items-start lg:justify-between lg:px-0">
       <div className="mb-12 lg:mb-0">
         <h2 className="text-4xl font-bold text-bico-gray-400 dark:text-white lg:text-8xl">
           What <br className="hidden lg:block" />

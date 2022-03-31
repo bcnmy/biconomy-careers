@@ -12,7 +12,7 @@ import discordLogoDark from '../assets/images/discord-logo-dark.svg';
 function Footer() {
   return (
     <footer className="h-[9.375rem] w-full bg-bico-gray-300 lg:h-[18.75rem]">
-      <div className="container mx-auto grid h-full grid-cols-3 items-center px-8">
+      <div className="container mx-auto grid h-full grid-cols-3 items-center px-8 lg:px-0">
         <a
           href="https://biconomy.io"
           className="h-[50px] w-[38px] lg:h-auto lg:w-auto"
