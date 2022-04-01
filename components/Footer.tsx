@@ -26,8 +26,8 @@ function Footer() {
         </a>
 
         <div className="col-span-2 grid grid-cols-1 lg:grid-cols-2">
-          <nav className="mb-4 justify-self-center lg:mb-0">
-            <ul className="flex items-center">
+          <nav className="mb-4 justify-self-end lg:mb-0 lg:justify-self-center">
+            <ul className="flex flex-wrap items-center">
               <li className="mr-5 text-sm font-bold text-white dark:text-[#212325] lg:mr-14 lg:text-2xl">
                 <a
                   href="https://medium.com/biconomy"

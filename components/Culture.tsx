@@ -33,7 +33,7 @@ const moments = [
 
 function ImageDescription({ text }: { text: string }) {
   return (
-    <div className="mx-auto flex h-[68px] w-[calc(100%-20px)] items-center justify-center rounded-[12px] bg-culture-image-desc backdrop-blur-xl lg:h-[100px] lg:rounded-[40px]">
+    <div className="mx-auto flex h-[68px] w-[calc(100%-20px)] items-center justify-center rounded-[12px] bg-culture-image-desc backdrop-blur-xl md:rounded-[40px] lg:h-[100px]">
       <p className="text-center text-sm font-bold text-white lg:text-base">
         {text}
       </p>
@@ -81,16 +81,14 @@ function Culture() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="relative h-[240px] w-full overflow-hidden lg:h-[650px] lg:w-[870px]"
+        className="relative"
       >
         <Image
           src={moments[momentIndex].img}
           alt="Culture"
-          layout="fill"
-          objectFit="contain"
           placeholder="blur"
         />
-        <div className="absolute bottom-[8px] w-full lg:bottom-[10px]">
+        <div className="absolute bottom-[18px] w-full">
           <ImageDescription text={moments[momentIndex].description} />
         </div>
       </motion.div>
