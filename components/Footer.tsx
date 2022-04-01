@@ -28,7 +28,7 @@ function Footer() {
         <div className="col-span-2 grid grid-cols-1 lg:grid-cols-2">
           <nav className="mb-4 justify-self-end lg:mb-0 lg:justify-self-center">
             <ul className="flex flex-wrap items-center">
-              <li className="mr-5 text-sm font-bold text-white dark:text-[#212325] lg:mr-14 lg:text-2xl">
+              <li className="mr-4 text-sm font-bold text-white dark:text-[#212325] lg:mr-12 lg:text-2xl">
                 <a
                   href="https://medium.com/biconomy"
                   target="_blank"
@@ -37,7 +37,7 @@ function Footer() {
                   Blog
                 </a>
               </li>
-              <li className="mr-5 text-sm font-bold text-white dark:text-[#212325] lg:mr-14 lg:text-2xl">
+              <li className="mr-4 text-sm font-bold text-white dark:text-[#212325] lg:mr-12 lg:text-2xl">
                 <a
                   href="https://docs.biconomy.io/comm/contact-us"
                   target="_blank"
@@ -46,7 +46,7 @@ function Footer() {
                   Contact
                 </a>
               </li>
-              <li className="mr-5 text-sm font-bold text-white dark:text-[#212325] lg:mr-14 lg:text-2xl">
+              <li className="mr-4 text-sm font-bold text-white dark:text-[#212325] lg:mr-12 lg:text-2xl">
                 <a
                   href="https://twitter.com/biconomy"
                   target="_blank"
@@ -60,7 +60,7 @@ function Footer() {
                   </div>
                 </a>
               </li>
-              <li className="mr-5 text-sm font-bold text-white dark:text-[#212325] lg:mr-14 lg:text-2xl">
+              <li className="mr-4 text-sm font-bold text-white dark:text-[#212325] lg:mr-12 lg:text-2xl">
                 <a
                   href="https://t.me/biconomy"
                   target="_blank"

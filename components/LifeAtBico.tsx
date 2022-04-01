@@ -65,17 +65,19 @@ function Perk({
 
 function LifeAtBico() {
   return (
-    <article className="container mx-auto mb-12 flex flex-col justify-center px-8 lg:flex-row lg:items-start lg:justify-between lg:px-0">
+    <article className="container mx-auto mb-12 grid grid-cols-1 justify-center gap-2.5 px-8 lg:px-0 xl:grid-cols-3">
       <h2 className="mb-12 text-4xl font-bold text-bico-gray-400 dark:text-white lg:text-8xl">
         Life <br className="hidden lg:block" />
         at <br className="hidden lg:block" />
         Bico
       </h2>
 
-      <div className="grid grid-cols-1 gap-2.5 lg:grid-cols-[430px_430px]">
-        {perks.map((perk, index) => (
-          <Perk key={index} perk={perk} />
-        ))}
+      <div className="xl:col-span-2">
+        <div className="grid grid-cols-1 xl:grid-cols-2">
+          {perks.map((perk, index) => (
+            <Perk key={index} perk={perk} />
+          ))}
+        </div>
       </div>
     </article>
   );

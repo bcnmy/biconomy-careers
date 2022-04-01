@@ -100,7 +100,7 @@ function OpenRoles() {
   return (
     <article
       id="open-roles"
-      className="container mx-auto mb-20 flex flex-col justify-center px-8 lg:mb-40 lg:flex-row lg:items-start lg:justify-between lg:px-0"
+      className="container mx-auto mb-24 grid grid-cols-1 justify-center gap-2.5 px-8 lg:mb-40 lg:px-0 xl:grid-cols-3"
     >
       <div>
         <h2 className="mb-6 text-4xl font-bold text-bico-gray-400 dark:text-white lg:text-8xl">
@@ -111,6 +111,7 @@ function OpenRoles() {
           We are always looking forward to make new
           <br /> frens in building the future of web3.
         </p>
+
         <div className="mb-12 flex w-full flex-wrap gap-2.5 lg:w-[360px]">
           {departmentsError ? (
             <span className="text-lg font-bold text-bico-gray-400 dark:text-white">
@@ -151,7 +152,7 @@ function OpenRoles() {
         </div>
       </div>
 
-      <div className="relative grid grid-cols-1 lg:grid-cols-[870px]">
+      <div className="relative xl:col-span-2">
         {jobsError ? (
           <span className="text-2xl leading-normal text-bico-gray-400 dark:text-white lg:text-[2.75rem]">
             Oops! something went wrong while getting the list of roles. Please
