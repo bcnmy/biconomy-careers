@@ -1,4 +1,7 @@
+import Image from 'next/image';
 import { useState } from 'react';
+
+import heroImage from '../public/hero.png';
 
 function Hero() {
   const [position, setPosition] = useState<{
@@ -17,26 +20,28 @@ function Hero() {
   }
 
   return (
-    <article className="container relative mx-auto mt-8 mb-16 h-[18rem] justify-center lg:mt-24 lg:mb-20 lg:h-[62.25rem]">
-      <div className="flex flex-col items-center">
-        <h2 className="text-center text-4xl font-bold text-bico-gray-400 dark:text-white lg:text-8xl">
-          Join The <br />
-          Biconauts
-        </h2>
-      </div>
+    <article
+      className="container relative mx-auto mt-8 mb-16 h-[18rem] justify-center lg:mt-24 lg:mb-20 lg:h-[62.25rem]"
+      onMouseMove={handleMouseMove}
+    >
+      <h2 className="text-center text-4xl font-bold text-bico-gray-400 dark:text-white lg:text-8xl">
+        Join The <br />
+        Biconauts
+      </h2>
 
       <div
-        className="absolute top-0 h-full w-full bg-hero-image bg-contain bg-[center_top_2.5rem] bg-no-repeat"
+        className="absolute top-8"
         style={{
-          backgroundPosition:
+          transform:
             position.pageX && position.pageX > 0
-              ? `left -${position.pageX * 0.05}px top 2.5rem`
+              ? `translateX(-${position.pageX * 0.05}px)`
               : position.pageX && position.pageX < 0
-              ? `right ${position.pageX * 0.05}px top 2.5rem`
+              ? `translateX(${-position.pageX * 0.05}px)`
               : '',
         }}
-        onMouseMove={handleMouseMove}
-      ></div>
+      >
+        <Image src={heroImage} alt="Join the Biconauts" />
+      </div>
     </article>
   );
 }
