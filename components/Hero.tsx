@@ -21,7 +21,7 @@ function Hero() {
 
   return (
     <article
-      className="container relative mx-auto mt-8 mb-16 h-[18rem] justify-center lg:mt-24 lg:mb-20 lg:h-[62.25rem]"
+      className="container relative mx-auto mt-8 mb-16 h-60 justify-center md:h-[32rem] lg:mt-24 lg:mb-20 lg:h-[62rem]"
       onMouseMove={handleMouseMove}
     >
       <h2 className="text-center text-4xl font-bold text-bico-gray-400 dark:text-white lg:text-8xl">
