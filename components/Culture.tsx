@@ -81,7 +81,7 @@ function Culture() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="relative h-[240px] w-full overflow-hidden rounded-[30px] lg:h-[650px] lg:w-[870px] lg:rounded-[50px]"
+        className="relative h-[240px] w-full overflow-hidden lg:h-[650px] lg:w-[870px]"
       >
         <Image
           src={moments[momentIndex].img}
