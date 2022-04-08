@@ -44,40 +44,37 @@ function Job({
     : 'Remote';
 
   return (
-    <a
-      href={shortlink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group mb-14 cursor-pointer"
-    >
-      <div className="mb-2 flex items-center justify-between">
-        <p className="text-2xl text-bico-gray-400 group-hover:text-bico-orange dark:text-white lg:text-[2.75rem]">
-          {title}
-        </p>
+    <div className="group mb-8 cursor-pointer lg:mb-14">
+      <a href={shortlink} target="_blank" rel="noopener noreferrer">
+        <div className="mb-2 flex items-center justify-between">
+          <p className="text-2xl text-bico-gray-400 group-hover:text-bico-orange dark:text-white lg:text-[2.75rem]">
+            {title}
+          </p>
 
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-bico-gray-400 group-hover:text-bico-orange dark:text-white lg:h-10 lg:w-10"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M17 8l4 4m0 0l-4 4m4-4H3"
-          />
-        </svg>
-      </div>
-      <div className="mb-6 h-px w-full bg-bico-gray-400 dark:bg-white"></div>
-      <p className="flex items-center text-sm font-bold text-bico-gray-400 dark:text-white lg:text-2xl">
-        {location}
-        {telecommuting ? (
-          <span className="ml-6 text-[10px] lg:text-[18px]">🌎</span>
-        ) : null}
-      </p>
-    </a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 text-bico-gray-400 group-hover:text-bico-orange dark:text-white lg:h-10 lg:w-10"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
+        </div>
+        <div className="mb-6 h-px w-full bg-bico-gray-400 dark:bg-white"></div>
+        <p className="flex items-center text-sm font-bold text-bico-gray-400 dark:text-white lg:text-2xl">
+          {location}
+          {telecommuting ? (
+            <span className="ml-6 text-[10px] lg:text-[18px]">🌎</span>
+          ) : null}
+        </p>
+      </a>
+    </div>
   );
 }
 
