@@ -64,15 +64,16 @@ function Culture() {
           Culture
         </h2>
         <p className="mb-12 text-sm font-bold text-bico-gray-400 dark:text-white">
-          We&apos;ve built a rock-solid cuture at Biconomy
-          <br />
-          by valuing all sorts of things! But we particularly
-          <br />
-          take pride in treating people right, spreading
-          <br />
-          joy, taking responsibility, being transparent
-          <br />
-          and moving fast.
+          Biconomy is a team of web3 enthusiasts building the infrastructure for
+          the future of the decentralised internet. We are all relentlessly
+          driven by our shared vision of making web3 mainstream. We&pos;ve built
+          a rock-solid culture at Biconomy by valuing all sorts of things! But
+          we particularly take pride in treating people right, spreading joy,
+          taking responsibility, being transparent and moving fast. As an agile
+          organization tackling audaciously ambitious goals, every team member
+          has to take initiative & own critical functions. That means you have
+          an amazing opportunity to play a significant role in bringing
+          decentralise tech to the masses.
         </p>
       </div>
 
