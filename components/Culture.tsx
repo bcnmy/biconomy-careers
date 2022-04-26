@@ -63,16 +63,16 @@ function Culture() {
         <h2 className="mb-6 text-4xl font-bold text-bico-gray-400 dark:text-white lg:text-8xl">
           Culture
         </h2>
-        <p className="mb-12 text-sm font-bold text-bico-gray-400 dark:text-white">
+        <p className="mb-12 text-sm font-bold text-bico-gray-400 dark:text-white xl:pr-10">
           Biconomy is a team of web3 enthusiasts building the infrastructure for
           the future of the decentralised internet. We are all relentlessly
-          driven by our shared vision of making web3 mainstream. We&pos;ve built
-          a rock-solid culture at Biconomy by valuing all sorts of things! But
-          we particularly take pride in treating people right, spreading joy,
-          taking responsibility, being transparent and moving fast. As an agile
-          organization tackling audaciously ambitious goals, every team member
-          has to take initiative & own critical functions. That means you have
-          an amazing opportunity to play a significant role in bringing
+          driven by our shared vision of making web3 mainstream. We&apos;ve
+          built a rock-solid culture at Biconomy by valuing all sorts of things!
+          But we particularly take pride in treating people right, spreading
+          joy, taking responsibility, being transparent and moving fast. As an
+          agile organization tackling audaciously ambitious goals, every team
+          member has to take initiative & own critical functions. That means you
+          have an amazing opportunity to play a significant role in bringing
           decentralise tech to the masses.
         </p>
       </div>
